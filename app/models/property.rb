@@ -1,2 +1,3 @@
-class Property < ApplicationRecord
+class Property
+  include ActiveModel::Model
 end
