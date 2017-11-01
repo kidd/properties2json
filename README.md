@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a single purpose endpoint to convert .properties files to json.
 
-Things you may want to cover:
 
-* Ruby version
+## Usage
 
-* System dependencies
+```bash
+curl -XPOST http://localhost:3000/properties/ -F "property[text]=@ValidationMessages_es.properties" JQ
+```
 
-* Configuration
+## Author
+Raimon Grau <raimonster@gmail.com>
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+WTFPL
