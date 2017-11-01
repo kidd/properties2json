@@ -5,10 +5,12 @@ class PropertiesController < ApplicationController
   end
 
   def new
+    @property = Property.new
   end
 
   def create
-    render plain: params[:article].inspect
+    @json = JavaProperties.parse(params[:property][:text].read).to_json
+    render plain: @json
   end
 
   def destroy

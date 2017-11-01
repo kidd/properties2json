@@ -1,15 +1,6 @@
-<%= form_with scope: :article, url: properties_path, local: true do |form| %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+<p>You are supposed to upload a .properties file here</p>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
+<%= form_for @property do |f| %>
+  <%= f.file_field :text %>
+  <%= f.submit %>
 <% end %>
