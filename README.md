@@ -6,7 +6,10 @@ This is a single purpose endpoint to convert .properties files to json.
 ## Usage
 
 ```bash
-curl -XPOST http://localhost:3000/properties/ -F "property[text]=@ValidationMessages_es.properties" JQ
+cat >test.properties <<EOF
+foo.bar = baz
+EOF
+curl -XPOST http://localhost:3000/properties/ -F "property[text]=@test.properties" | jq
 ```
 
 ## Author
