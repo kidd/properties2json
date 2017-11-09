@@ -12,6 +12,8 @@ EOF
 curl -XPOST http://localhost:3000/properties/ -F "property[text]=@test.properties" | jq
 ```
 
+Try it @ http://properties2json.raimonster.com/
+
 ## Author
 Raimon Grau <raimonster@gmail.com>
 
